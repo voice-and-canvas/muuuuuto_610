@@ -1,0 +1,73 @@
+:root {
+    --main-bg: #0f0f0f;
+    --accent-color: #8a2be2; /* 紫 */
+    --text-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--accent-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 1.5rem; letter-spacing: 2px; color: var(--accent-color); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+
+#hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg') center/cover;
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+    margin-bottom: 40px;
+}
+
+.dark-bg { background: #1a1a1a; }
+
+.sample-grid { display: grid; gap: 15px; }
+.sample-item {
+    background: #252525;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+audio { filter: invert(1); }
+
+footer { text-align: center; padding: 40px; font-size: 0.8rem; border-top: 1px solid #333; }
