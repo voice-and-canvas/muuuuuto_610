@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>夢兎 Official Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="bg-dots"></div>
+    <div class="bg-blurred-wrap">
+        <img src="images/profile.png" class="bg-blurred-img" id="blurImg">
+    </div>
+
+    <div class="fixed-char-wrap">
+        <img src="images/profile.png" class="fixed-char">
+    </div>
 
     <header>
-        <div class="container header-inner">
+        <div class="header-inner">
             <h1 class="logo">夢兎</h1>
             <nav>
                 <ul class="nav-menu">
@@ -27,62 +32,40 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero-section fade-in">
-            <div class="glass-card main-profile">
-                <div class="profile-image">
-                    <img src="images/profile.jpg" alt="夢兎" onerror="this.src='https://via.placeholder.com/150/ffdae0/ffffff?text=Icon'">
-                </div>
-                <h2 class="name">夢兎</h2>
-                <p class="description">声優 / ナレーター / クリエイター</p>
-                <div class="sns-links">
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </section>
+    <main>
+        <section class="spacer"></section>
 
-        <section id="news" class="fade-in">
-            <h3 class="section-title"><i class="fa-regular fa-envelope"></i> News</h3>
-            <div class="glass-card post-item">
-                <div class="post-meta">
-                    <span class="date">2026.02.14</span>
-                    <span class="category">INFO</span>
-                </div>
-                <p class="post-title">ホームページをGitHub Pagesへ移管しました。</p>
-            </div>
-        </section>
+        <div class="content-scroll-area">
+            <div class="inner-content">
+                <section id="profile" class="section">
+                    <p class="intro-text">
+                        声優の夢叶です。<br>
+                        少年から青年ボイス、かっこいい女性の演技が得意です！<br>
+                        声にまつわるお仕事を中心に活動をしています。<br>
+                        よろしくお願いいたします。
+                    </p>
+                    <div class="voice-sample-list">
+                        <h3>【ボイスサンプル】</h3>
+                        <a href="#">自己紹介</a>
+                        <a href="#">セリフ①</a>
+                        <a href="#">セリフ②</a>
+                        <a href="#">セリフ③</a>
+                        <a href="#">セリフ④</a>
+                        <a href="#">セリフ⑤</a>
+                    </div>
+                </section>
 
-        <section id="schedule" class="fade-in">
-            <h3 class="section-title"><i class="fa-regular fa-calendar"></i> Schedule</h3>
-            <div class="glass-card">
-                <p class="no-data">現在、予定はありません。</p>
+                <section id="news" class="section">
+                    <h3 class="sec-title">News</h3>
+                    <div class="news-item">
+                        <p class="news-date">2026.02.14 INFO</p>
+                        <p>ホームページをGitHub Pagesへ完全移管しました。</p>
+                    </div>
+                </section>
             </div>
-        </section>
-
-        <section id="profile" class="fade-in">
-            <h3 class="section-title"><i class="fa-regular fa-user"></i> Profile</h3>
-            <div class="glass-card">
-                <p>ここにプロフィール文が入ります。Flagのサイトからコピーして貼り付けてください。</p>
-            </div>
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <p class="copyright">&copy; 夢兎 All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        // スクロール時のフェードイン制御
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
